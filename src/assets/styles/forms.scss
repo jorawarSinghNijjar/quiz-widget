@@ -3,6 +3,18 @@
   border: 1px solid rgba(94, 97, 101, 0.3);
   border-radius: 12px;
   padding: 15px 16px;
+  margin-bottom: 16px;
+  color: #EEEEEE;
+
+  &:focus {
+    background: #272c35;
+    border: 1.2px solid #ffca1f;
+    box-shadow: 1px -1px 11px -1px rgba(255, 202, 31, 0.69);
+    -webkit-box-shadow: 1px -1px 11px -1px rgba(255, 202, 31, 0.69);
+    -moz-box-shadow: 1px -1px 11px -1px rgba(255, 202, 31, 0.69);
+    color: #eeeeee;
+    caret-color: #ffca1f;
+  }
 
   &::placeholder {
     font-weight: 500;
@@ -18,5 +30,74 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  color: #EEEEEE;
+  color: #eeeeee;
+}
+
+.form-check-label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.desc-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #b7b8ba;
+}
+
+// .form-check {
+//   background: #272c35;
+//   border-radius: 20px;
+//   padding: 16px 20px;
+// }
+
+.form-check-input[type="radio"],
+.form-check-input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid #5e6165;
+  border-radius: 14px;
+  margin: 0;
+  position: relative;
+
+  &:checked {
+    background-color: #ffca1f;
+    background-image: url("../images/icons/checkbox-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 9px 7px;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.checkbox-wrapper {
+  background: #272c35;
+  border-radius: 20px;
+  padding: 16px 20px;
+  margin-bottom: 8px;
+}
+
+.input[type="date"] {
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+input::-webkit-datetime-edit {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="date" i]::-webkit-calendar-picker-indicator {
+  color: rgba(255, 255, 255, 0.5);
+  background-image: url("../images/icons/calendar.svg");
+  background-origin: content-box;
+  background-size: contain;
+  height: 17px;
+  width: 17px;
+  opacity: 1;
+  background-repeat: no-repeat;
+  outline: none;
+  padding: 2px;
 }

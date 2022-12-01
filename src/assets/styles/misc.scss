@@ -1,12 +1,33 @@
-.widget-progress-bar{
-    height: 4px;
-    background-color:  rgba(94, 97, 101, 0.3);
-    margin-top: 24px;
+.widget-progress-bar {
+  height: 4px;
+  background-color: rgba(94, 97, 101, 0.3);
+  margin-top: 24px;
 }
 
-.back-btn-icon{
-    color: #FFFFFF;
-    font-size: 18px;
-    position: absolute;
+.back-btn-icon {
+  color: #ffffff;
+  font-size: 18px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.logo-box {
+  margin-top: 40px;
+}
+
+.logo-icon {
+  margin-right: 18px;
+}
+
+.policy-checkbox-wrapper {
+  background-color: transparent;
+}
+
+.policy-text {
+  margin-left: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
