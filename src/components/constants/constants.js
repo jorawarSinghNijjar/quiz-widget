@@ -1,1 +1,3 @@
-export const sendEmailUrl = 'http://localhost:3300/send-email';
+import { prodUrl } from "../../apiUrlConfig";
+
+export const sendEmailUrl = `${prodUrl}/send-email`;
