@@ -13,9 +13,12 @@
   line-height: 24px;
   color: #20242a;
 
-  &:hover {
-    background: #ffca1f;
-    opacity: 0.5;
+  &:hover,
+  &:active {
+    border-color: transparent !important;
+    color: #20242A !important;
+    background: #E6AF00 !important;
+    // opacity: 0.5;
   }
 
   &__box{
