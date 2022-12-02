@@ -1,0 +1,21 @@
+export const SupplementList = {
+  NMN: "NMN",
+  TMG: "TMG",
+  FISETIN: "Fisetin",
+  OMEGA_3:"Omega 3",
+  VIT_D_MG_K2: "Vit D Mg K2",
+  CREATINE: "Creatine",
+  CA_AKG: "CA-AKG",
+  RESVERATROL: "Resveratrol",
+  HLA: "HLA",
+  COQ10: "CoQ10",
+  COLLAGEN_PEPTIDES:"Collagen peptides",
+  COLLAGEN: "Collagen",
+  QUERCETIN:"Quercetin",
+  BERBERINE: "Berberine",
+  MG_VIT_VIT_K2: "Mg Vit Vit K2",
+  VIT_D3_MG_K2: "Vit D3 Mg K2",
+  SPERMIDINE: "Spermidine",
+  SIRT_6_ACTIVATOR: "Sirt 6 Activator",
+  HYALURONIC_ACID: "Hyaluronic Acid"
+};

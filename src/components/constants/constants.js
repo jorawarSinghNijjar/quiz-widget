@@ -1,0 +1,1 @@
+export const sendEmailUrl = 'http://localhost:3300/send-email';

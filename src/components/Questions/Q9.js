@@ -9,17 +9,16 @@ import logoIcon from "../../assets/images/icons/logo-icon.svg";
 import logoText from "../../assets/images/icons/logo-text.svg";
 import PolicyCheckBox from "../CustomCheckBox/PolicyCheckBox";
 import axios from "axios";
-
+import { sendEmailUrl } from "../constants/constants";
 
 export default function Q9(props) {
   // Emailing Process
 
   const {userProfile} = useSelector((state) => state);
-  console.log(userProfile)
 
   const sendEmail = () => {
 
-    axios.post('http://localhost:3300/send-email', userProfile)
+    axios.post(sendEmailUrl, userProfile)
     .then(function (response) {
       console.log(response);
     })
@@ -83,6 +82,7 @@ export default function Q9(props) {
                 placeholder="Eg. hello@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                autoComplete="on"
               />
               {/* <Form.Control.Feedback type="invalid">
                 Please provide a valid email

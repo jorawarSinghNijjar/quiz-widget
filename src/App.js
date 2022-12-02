@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 // import Button from "./components/Button/Button";
 import {
   Row,
@@ -15,19 +16,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { previousQuestion as previousQuestionAction} from './slices/question';
 
 import Question from "./components/Question/Question";
-
-// const userProfile = {
-//   id: "",
-//   email: "",
-//   name: "",
-//   gender: "",
-//   longevityScienceInterestDuration: 0,
-//   reasonForInterest: "",
-//   currentSupplements: [],
-//   currentLifeFactors: [],
-//   dislikedSupplements: [],
-//   topLongevityGoals: [], //max 3
-// };
 
 const App = () => {
   const {questionNumber} = useSelector((state) => state)

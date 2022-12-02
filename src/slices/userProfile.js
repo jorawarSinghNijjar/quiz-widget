@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import { prepareAdvice, getRecommendedSupplementsForEmail } from "../data/Advice";
+
 const initialState = {
   id: "",
   email: "",
@@ -11,7 +13,11 @@ const initialState = {
   currentLifeFactors: [],
   dislikedSupplements: [],
   topLongevityGoals: [], //max 3
+  recommendedSupplements: [],
+  recommendedSupplementsForEmail:[]
 };
+
+
 
 const userProfileSlice = createSlice({
   name: "profile",
@@ -36,17 +42,28 @@ const userProfileSlice = createSlice({
       state.currentSupplements = action.payload;
     },
     addCurrentLifeFactors: (state, action) => {
-        state.currentLifeFactors = action.payload;
+      state.currentLifeFactors = action.payload;
     },
     addDislikedSupplements: (state, action) => {
       state.dislikedSupplements = action.payload;
     },
     addTopLongevityGoals: (state, action) => {
       state.topLongevityGoals = action.payload;
+      const {topLongevityGoals, currentSupplements, dislikedSupplements} = state;
+      
+      const recommendedSupplements = prepareAdvice(topLongevityGoals, currentSupplements,dislikedSupplements);
+
+      const recommendedSupplementsForEmail = getRecommendedSupplementsForEmail(recommendedSupplements);
+
+      console.log(recommendedSupplements);
+      console.log(recommendedSupplementsForEmail);
+
+      state.recommendedSupplements = recommendedSupplements;
+      state.recommendedSupplementsForEmail = recommendedSupplementsForEmail;
     },
-    addEmail: (state,action) => {
+    addEmail: (state, action) => {
       state.email = action.payload;
-    }
+    },
   },
 });
 
@@ -60,7 +77,7 @@ export const {
   addCurrentLifeFactors,
   addDislikedSupplements,
   addTopLongevityGoals,
-  addEmail
+  addEmail,
 } = userProfileSlice.actions;
 
 export default userProfileSlice.reducer;

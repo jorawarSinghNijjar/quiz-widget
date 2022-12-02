@@ -1,0 +1,92 @@
+import { SupplementList } from "./SupplementList";
+import {
+  MOOD,
+  COGNITIVE_PERFORMANCE,
+  ENGERGY_LEVELS,
+  LOOKING_YOUNGER,
+  MAINTAINING_ATHLETIC_PERFORMANCE,
+  MOBILITY,
+  STRESS_MANAGEMENT,
+  METABOLIC_HEALTH,
+} from "./LongevityGoalList";
+
+export const goalSupplementMap = new Map();
+
+const {
+  NMN,
+  TMG,
+  FISETIN,
+  OMEGA_3,
+  VIT_D_MG_K2,
+  CREATINE,
+  CA_AKG,
+  RESVERATROL,
+  HLA,
+  COQ10,
+  COLLAGEN_PEPTIDES,
+  COLLAGEN,
+  QUERCETIN,
+  BERBERINE,
+  MG_VIT_VIT_K2,
+  VIT_D3_MG_K2,
+} = SupplementList;
+
+goalSupplementMap.set(MOOD, [
+  NMN,
+  TMG,
+  FISETIN,
+  OMEGA_3,
+  VIT_D_MG_K2,
+  CREATINE,
+]);
+
+// 1 MOOD
+goalSupplementMap.set(MOOD, [
+  NMN,
+  TMG,
+  FISETIN,
+  OMEGA_3,
+  VIT_D_MG_K2,
+  CREATINE,
+]);
+
+// 2 COGNITIVE_PERFORMANCE
+goalSupplementMap.set(COGNITIVE_PERFORMANCE, [NMN, TMG, VIT_D_MG_K2]);
+
+// 3 ENGERGY_LEVELS
+goalSupplementMap.set(ENGERGY_LEVELS, [NMN, TMG, CA_AKG, VIT_D_MG_K2]);
+
+// 4 LOOKING_YOUNGER
+goalSupplementMap.set(LOOKING_YOUNGER, [
+  NMN,
+  TMG,
+  RESVERATROL,
+  CA_AKG,
+  HLA,
+  FISETIN,
+]);
+
+// 5 MAINTAINING_ATHLETIC_PERFORMANCE
+goalSupplementMap.set(MAINTAINING_ATHLETIC_PERFORMANCE, [
+  NMN,
+  TMG,
+  VIT_D_MG_K2,
+  HLA,
+  COQ10,
+  COLLAGEN_PEPTIDES,
+]);
+
+// 6 MOBILITY
+goalSupplementMap.set(MOBILITY, [HLA, COLLAGEN, MG_VIT_VIT_K2, OMEGA_3]);
+
+// 7 STRESS_MANAGEMENT
+goalSupplementMap.set(STRESS_MANAGEMENT, [OMEGA_3, VIT_D3_MG_K2]);
+
+// 8 METABOLIC_HEALTH
+goalSupplementMap.set(METABOLIC_HEALTH, [
+  NMN,
+  TMG,
+  RESVERATROL,
+  QUERCETIN,
+  BERBERINE,
+]);
