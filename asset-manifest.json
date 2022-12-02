@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/quiz-widget/static/css/main.902d2e8a.css",
-    "main.js": "/quiz-widget/static/js/main.7a494718.js",
+    "main.js": "/quiz-widget/static/js/main.cee56429.js",
     "static/media/logo-text.svg": "/quiz-widget/static/media/logo-text.fe09c5c50bcc6bcab4bdc6cffd49acb9.svg",
     "static/media/logo-icon.svg": "/quiz-widget/static/media/logo-icon.52c432438244b9104c02b96b18b421b7.svg",
     "index.html": "/quiz-widget/index.html",
@@ -9,10 +9,10 @@
     "static/media/back-arrow.svg": "/quiz-widget/static/media/back-arrow.3d81b72803bde382130d6588d5b141e6.svg",
     "static/media/checkbox-tick.svg": "/quiz-widget/static/media/checkbox-tick.f765f7811c63376ae15c.svg",
     "main.902d2e8a.css.map": "/quiz-widget/static/css/main.902d2e8a.css.map",
-    "main.7a494718.js.map": "/quiz-widget/static/js/main.7a494718.js.map"
+    "main.cee56429.js.map": "/quiz-widget/static/js/main.cee56429.js.map"
   },
   "entrypoints": [
     "static/css/main.902d2e8a.css",
-    "static/js/main.7a494718.js"
+    "static/js/main.cee56429.js"
   ]
 }
