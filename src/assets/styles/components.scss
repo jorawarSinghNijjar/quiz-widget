@@ -3,7 +3,8 @@
   border-radius: 40px !important;
   border: none;
   padding: 14px 20px;
-  width: 100%;
+  width: 95%;
+  margin:0 auto;
 
   font-family: "Red Hat Display" !important;
   font-style: normal;
@@ -15,6 +16,10 @@
   &:hover {
     background: #ffca1f;
     opacity: 0.5;
+  }
+
+  &__box{
+    background-color: #20242A;
   }
 }
 

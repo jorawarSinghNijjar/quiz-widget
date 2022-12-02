@@ -14,17 +14,17 @@ import { sendEmailUrl } from "../constants/constants";
 export default function Q9(props) {
   // Emailing Process
 
-  const {userProfile} = useSelector((state) => state);
+  const { userProfile } = useSelector((state) => state);
 
   const sendEmail = () => {
-
-    axios.post(sendEmailUrl, userProfile)
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    axios
+      .post(sendEmailUrl, userProfile)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   const [email, setEmail] = useState("");
@@ -74,7 +74,7 @@ export default function Q9(props) {
       <Row>
         <Col>
           <Form noValidate validated={validated} onSubmit={onFormSubmit}>
-            <Form.Group className="mb-3">
+            <Form.Group className="mb-3 form-content-box">
               <Form.Label>Email</Form.Label>
               <Form.Control
                 required
@@ -96,16 +96,17 @@ export default function Q9(props) {
                 </p>
               </div>
             </Form.Group>
-
-            <Button
-              type="submit"
-              className="q-btn d-flex justify-content-between"
-            >
-              <div className="button-text">Continue</div>
-              <div>
-                <i className="fa-solid fa-circle-chevron-right button-icon"></i>
-              </div>
-            </Button>
+            <div className="q-btn__box fixed-bottom mx-auto">
+              <Button
+                type="submit"
+                className="q-btn d-flex justify-content-between"
+              >
+                <div className="button-text">Continue</div>
+                <div>
+                  <i className="fa-solid fa-circle-chevron-right button-icon"></i>
+                </div>
+              </Button>
+            </div>
           </Form>
         </Col>
       </Row>
