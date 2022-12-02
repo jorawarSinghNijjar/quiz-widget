@@ -8,24 +8,25 @@ import { nextQuestion } from "../../slices/question";
 import logoIcon from "../../assets/images/icons/logo-icon.svg";
 import logoText from "../../assets/images/icons/logo-text.svg";
 import PolicyCheckBox from "../CustomCheckBox/PolicyCheckBox";
-import axios from "axios";
-import { sendEmailUrl } from "../constants/constants";
+// import axios from "axios";
+// import { sendEmailUrl } from "../constants/constants";
 
 export default function Q9(props) {
   // Emailing Process
 
-  const {userProfile} = useSelector((state) => state);
+  // const { userProfile } = useSelector((state) => state);
 
-  const sendEmail = () => {
-
-    axios.post(sendEmailUrl, userProfile)
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  };
+  // const sendEmail = () => {
+  //   console.log(userProfile)
+  //   axios
+  //     .post(sendEmailUrl, userProfile)
+  //     .then(function (response) {
+  //       console.log(response);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // };
 
   const [email, setEmail] = useState("");
   const [policyAccepted, setPolicyAccepted] = useState(false);
@@ -43,7 +44,7 @@ export default function Q9(props) {
       dispatch(addEmail(email));
       dispatch(nextQuestion());
 
-      sendEmail();
+      // sendEmail();
 
       console.log("submitting Q9...");
     } else {
@@ -74,7 +75,7 @@ export default function Q9(props) {
       <Row>
         <Col>
           <Form noValidate validated={validated} onSubmit={onFormSubmit}>
-            <Form.Group className="mb-3">
+            <Form.Group className="mb-3 form-content-box">
               <Form.Label>Email</Form.Label>
               <Form.Control
                 required
@@ -96,16 +97,17 @@ export default function Q9(props) {
                 </p>
               </div>
             </Form.Group>
-
-            <Button
-              type="submit"
-              className="q-btn d-flex justify-content-between"
-            >
-              <div className="button-text">Continue</div>
-              <div>
-                <i className="fa-solid fa-circle-chevron-right button-icon"></i>
-              </div>
-            </Button>
+            <div className="q-btn__box fixed-bottom mx-auto">
+              <Button
+                type="submit"
+                className="q-btn d-flex justify-content-between"
+              >
+                <div className="button-text">Continue</div>
+                <div>
+                  <i className="fa-solid fa-circle-chevron-right button-icon"></i>
+                </div>
+              </Button>
+            </div>
           </Form>
         </Col>
       </Row>

@@ -101,3 +101,16 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
   outline: none;
   padding: 2px;
 }
+
+.form-content-box{
+  // height: 390px;
+  max-height: 300px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar{
+    display:none;
+  }
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 
 import { useState } from "react";
@@ -7,7 +7,6 @@ import { addName } from "../../slices/userProfile";
 import { nextQuestion } from "../../slices/question";
 
 export default function Q1(props) {
-
   const [name, setName] = useState("");
 
   const dispatch = useDispatch();
@@ -31,7 +30,7 @@ export default function Q1(props) {
       <Row>
         <Col>
           <Form onSubmit={onFormSubmit}>
-            <Form.Group className="mb-3">
+            <Form.Group className="mb-3 form-content-box">
               <Form.Label>Your first and last names</Form.Label>
               <Form.Control
                 type="text"
@@ -41,20 +40,23 @@ export default function Q1(props) {
               />
             </Form.Group>
             {/* <div className="bottom-row"> */}
-              {/* <Row> */}
-                {/* <Col md={8} className="mx-auto"> */}
-                  {/* Remember icon is sourced from fontawesome */}
-                  <Button
-                    type="submit"
-                    className="q-btn d-flex justify-content-between"
-                  >
-                    <div className="button-text">Next Step</div>
-                    <div>
-                      <i className="fa-solid fa-circle-chevron-right button-icon"></i>
-                    </div>
-                  </Button>
-                {/* </Col> */}
-              {/* </Row> */}
+            {/* <Row> */}
+            {/* <Col md={8} className="mx-auto"> */}
+            {/* Remember icon is sourced from fontawesome */}
+            <div className="q-btn__box fixed-bottom mx-auto">
+              <Button
+                type="submit"
+                className="q-btn d-flex justify-content-between"
+              >
+                <div className="button-text">Next Step</div>
+                <div>
+                  <i className="fa-solid fa-circle-chevron-right button-icon"></i>
+                </div>
+              </Button>
+            </div>
+
+            {/* </Col> */}
+            {/* </Row> */}
             {/* </div> */}
           </Form>
         </Col>

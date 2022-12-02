@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 
 import { useState } from "react";
@@ -7,7 +7,6 @@ import { addReasonForInterest } from "../../slices/userProfile";
 import { nextQuestion } from "../../slices/question";
 
 export default function Q4(props) {
-
   const [answer, setAnswer] = useState("");
 
   const dispatch = useDispatch();
@@ -31,7 +30,7 @@ export default function Q4(props) {
       <Row>
         <Col>
           <Form onSubmit={onFormSubmit}>
-            <Form.Group className="mb-3">
+            <Form.Group className="mb-3 form-content-box">
               <Form.Control
                 as="textarea"
                 type="text"
@@ -40,15 +39,17 @@ export default function Q4(props) {
                 onChange={(e) => setAnswer(e.target.value)}
               />
             </Form.Group>
-                  <Button
-                    type="submit"
-                    className="q-btn d-flex justify-content-between"
-                  >
-                    <div className="button-text">Next Step</div>
-                    <div>
-                      <i className="fa-solid fa-circle-chevron-right button-icon"></i>
-                    </div>
-                  </Button>
+            <div className="q-btn__box fixed-bottom mx-auto">
+              <Button
+                type="submit"
+                className="q-btn d-flex justify-content-between"
+              >
+                <div className="button-text">Next Step</div>
+                <div>
+                  <i className="fa-solid fa-circle-chevron-right button-icon"></i>
+                </div>
+              </Button>
+            </div>
           </Form>
         </Col>
       </Row>

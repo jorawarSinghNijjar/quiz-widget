@@ -44,7 +44,7 @@ export default function Question1(props) {
       <Row>
         <Col>
           <Form onSubmit={onFormSubmit}>
-            <Form.Group className="mb-3">
+            <Form.Group className="mb-3 form-content-box">
               {durationArr.map((item, idx) => (
                 <CustomRadioButton
                   key={idx}
@@ -56,16 +56,17 @@ export default function Question1(props) {
                 />
               ))}
             </Form.Group>
-
-            <Button
-              type="submit"
-              className="q-btn d-flex justify-content-between"
-            >
-              <div className="button-text">Next Step</div>
-              <div>
-                <i className="fa-solid fa-circle-chevron-right button-icon"></i>
-              </div>
-            </Button>
+            <div className="q-btn__box fixed-bottom mx-auto">
+              <Button
+                type="submit"
+                className="q-btn d-flex justify-content-between"
+              >
+                <div className="button-text">Next Step</div>
+                <div>
+                  <i className="fa-solid fa-circle-chevron-right button-icon"></i>
+                </div>
+              </Button>
+            </div>
           </Form>
         </Col>
       </Row>

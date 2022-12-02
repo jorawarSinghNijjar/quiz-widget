@@ -1,3 +1,5 @@
 import { prodUrl } from "../../apiUrlConfig";
+import { devUrl } from './../../apiUrlConfig';
 
-export const sendEmailUrl = `${prodUrl}/send-email`;
+export const sendEmailProdUrl = `${prodUrl}/send-email`;
+export const sendEmailDevUrl = `${devUrl}/send-email`;

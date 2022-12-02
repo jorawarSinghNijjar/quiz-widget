@@ -43,7 +43,7 @@ export default function Question1(props) {
       <Row>
         <Col>
           <Form onSubmit={onFormSubmit}>
-            <Form.Group className="mb-3">
+            <Form.Group className="mb-3 form-content-box">
               <Form.Label>Gender at birth</Form.Label>
               {["Male", "Female"].map((item, idx) => (
                 <CustomRadioButton
@@ -55,8 +55,7 @@ export default function Question1(props) {
                   handleChange={onGenderSelect}
                 />
               ))}
-            </Form.Group>
-            <Form.Group className="mb-3">
+
               <Form.Label>Date Of Birth</Form.Label>
               <Form.Control
                 type="date"
@@ -64,15 +63,20 @@ export default function Question1(props) {
                 onChange={onDobSelect}
               />
             </Form.Group>
-            <Button
-              type="submit"
-              className="q-btn d-flex justify-content-between"
-            >
-              <div className="button-text">Next Step</div>
-              <div>
-                <i className="fa-solid fa-circle-chevron-right button-icon"></i>
-              </div>
-            </Button>
+            {/* <Form.Group className="mb-3">
+             
+            </Form.Group> */}
+            <div className="q-btn__box fixed-bottom mx-auto">
+              <Button
+                type="submit"
+                className="q-btn d-flex justify-content-between"
+              >
+                <div className="button-text">Next Step</div>
+                <div>
+                  <i className="fa-solid fa-circle-chevron-right button-icon"></i>
+                </div>
+              </Button>
+            </div>
           </Form>
         </Col>
       </Row>

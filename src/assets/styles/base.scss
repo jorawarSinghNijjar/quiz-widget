@@ -8,6 +8,8 @@ body {
 
 .container-box {
   padding-top: 52px;
+  height: 100%;
+  // overflow: hidden;
 }
 
 a {
@@ -20,4 +22,12 @@ a {
   font-size: 16px;
   line-height: 24px;
   color: #b7b8ba;
+}
+
+.fixed-bottom{
+  // overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 45px; /* Position the navbar at the top of the page */
+  width: 100%;
+  padding-top:10px; /* Full width */
 }
