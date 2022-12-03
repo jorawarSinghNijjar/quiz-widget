@@ -1,6 +1,6 @@
 {
   "name": "quiz-widget",
-  "homepage": "https://jorawarsinghnijjar.github.io/quiz-widget/",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
