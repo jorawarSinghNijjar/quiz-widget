@@ -57,19 +57,22 @@ export default function Q8(props) {
     setSelectedCheckboxes(selectedCheckboxesArr);
   };
 
-  const checkDisable = (checkbox) => {
-    if (selectedLongevityGoals.length === 3) {
-      console.log("3 Done");
-      if (selectedLongevityGoals.includes(checkbox.id)) {
-        return false;
-      } else {
-        return true;
-      }
-    }
-    return false;
+  const checkDisable = (id) => {
+    return selectedCheckboxes.length > 2 && selectedCheckboxes.indexOf(id) === -1
+    // if (selectedLongevityGoals.length === 3) {
+    //   console.log("3 Done");
+    //   if (selectedLongevityGoals.includes(checkbox.id)) {
+    //     return false;
+    //   } else {
+    //     return true;
+    //   }
+    // }
+    // return false;
   };
-  console.log(selectedLongevityGoals);
-  console.log(checkedCount);
+
+  console.log("selectedCheckboxes  ", selectedCheckboxes)
+  // console.log(selectedLongevityGoals);
+  // console.log(checkedCount);
 
   return (
     <div>
@@ -91,7 +94,7 @@ export default function Q8(props) {
                   label={checkbox.text.title}
                   descText={checkbox.text.desc}
                   handleChange={(e) => onGoalSelect(e, checkbox.id)}
-                  disabled={checkDisable(checkbox)}
+                  disabled={checkDisable(checkbox.id)}
                 />
               ))}
             </Form.Group>
