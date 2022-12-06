@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/quiz-widget/static/css/main.902d2e8a.css",
-    "main.js": "/quiz-widget/static/js/main.dfd128d5.js",
-    "static/media/logo-text.svg": "/quiz-widget/static/media/logo-text.fe09c5c50bcc6bcab4bdc6cffd49acb9.svg",
-    "static/media/logo-icon.svg": "/quiz-widget/static/media/logo-icon.52c432438244b9104c02b96b18b421b7.svg",
-    "index.html": "/quiz-widget/index.html",
-    "static/media/calendar.svg": "/quiz-widget/static/media/calendar.f95826c356bf59d97a2e.svg",
-    "static/media/back-arrow.svg": "/quiz-widget/static/media/back-arrow.3d81b72803bde382130d6588d5b141e6.svg",
-    "static/media/checkbox-tick.svg": "/quiz-widget/static/media/checkbox-tick.f765f7811c63376ae15c.svg",
-    "main.902d2e8a.css.map": "/quiz-widget/static/css/main.902d2e8a.css.map",
-    "main.dfd128d5.js.map": "/quiz-widget/static/js/main.dfd128d5.js.map"
+    "main.css": "./static/css/main.11961c31.css",
+    "main.js": "./static/js/main.d501d07e.js",
+    "static/media/logo-text.svg": "./static/media/logo-text.fe09c5c50bcc6bcab4bdc6cffd49acb9.svg",
+    "static/media/logo-icon.svg": "./static/media/logo-icon.52c432438244b9104c02b96b18b421b7.svg",
+    "index.html": "./index.html",
+    "static/media/calendar.svg": "./static/media/calendar.f95826c356bf59d97a2e.svg",
+    "static/media/back-arrow.svg": "./static/media/back-arrow.3d81b72803bde382130d6588d5b141e6.svg",
+    "static/media/checkbox-tick.svg": "./static/media/checkbox-tick.f765f7811c63376ae15c.svg",
+    "main.11961c31.css.map": "./static/css/main.11961c31.css.map",
+    "main.d501d07e.js.map": "./static/js/main.d501d07e.js.map"
   },
   "entrypoints": [
-    "static/css/main.902d2e8a.css",
-    "static/js/main.dfd128d5.js"
+    "static/css/main.11961c31.css",
+    "static/js/main.d501d07e.js"
   ]
 }
