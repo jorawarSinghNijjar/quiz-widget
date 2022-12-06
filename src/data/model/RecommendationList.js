@@ -29,7 +29,7 @@ export const RecommendationSupplementList = {
       "If you are taking NMN or NR for longer than a few months, it is important to also take TMG or another source of Methyl groups. As NMN is metabolised, it uses up Methyl groups from the body in the process, which need to be replaced.",
   },
 
-  "Vit D Mg K2": {
+  "Vit D3 Mg K2": {
     name: "Vitamin D3, K2 and Mg",
     impact: "Stronger bones, mental health, musculoskeletal health",
     dosage:

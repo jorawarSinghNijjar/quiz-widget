@@ -12,12 +12,15 @@ import {
 import { nextQuestion } from "../../slices/question";
 
 const lifeFactorsArr = [
-  { id: 1, text: "Intermittent fasting" },
-  { id: 2, text: "Cold immersion" },
-  { id: 3, text: "Sleep tracking" },
-  { id: 4, text: "30 minutes of cardio >3 times a week" },
-  { id: 5, text: "Strength training >2 times per week" },
-  { id: 6, text: "Sunlight protocol" },
+  { id: 1, text: "Nothing yet" },
+  { id: 2, text: "Intermittent fasting" },
+  { id: 3, text: "Sauna or hot immersion" },
+  { id: 4, text: "Cold immersion" },
+  { id: 5, text: "Sleep tracking" },
+  { id: 6, text: "30 minutes of cardio >3 times a week" },
+  { id: 7, text: "Strength training >2 times per week" },
+  { id: 8, text: "Sunlight protocol" },
+  { id: 9, text: "Other please specify" },
 ];
 
 export default function Q6(props) {

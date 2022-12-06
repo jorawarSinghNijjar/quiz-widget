@@ -3,7 +3,7 @@ export const SupplementList = {
   TMG: "TMG",
   FISETIN: "Fisetin",
   OMEGA_3:"Omega 3",
-  VIT_D_MG_K2: "Vit D Mg K2",
+  // VIT_D_MG_K2: "Vit D Mg K2",
   CREATINE: "Creatine",
   CA_AKG: "CA-AKG",
   RESVERATROL: "Resveratrol",

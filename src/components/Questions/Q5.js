@@ -8,12 +8,19 @@ import { addCurrentSuplements } from "../../slices/userProfile";
 import { nextQuestion } from "../../slices/question";
 
 const supplementsArr = [
-  { id: 1, text: "NMN" },
-  { id: 2, text: "Resveratrol" },
-  { id: 3, text: "TMG" },
-  { id: 4, text: "Quercetin" },
-  { id: 5, text: "Fisetin" },
-  { id: 6, text: "Berberine" },
+  { id: 1, text: "None yet" },
+  { id: 2, text: "NMN or NR" },
+  { id: 3, text: "Resveratrol" },
+  { id: 4, text: "TMG" },
+  { id: 5, text: "Vitamin D3" },
+  { id: 6, text: "Omega 3" },
+  { id: 7, text: "Fisetin" },
+  { id: 8, text: "Quercetin" },
+  { id: 9, text: "Berberine" },
+  { id: 10, text: "Spermidine" },
+  { id: 11, text: "Sirt 6 Activator" },
+  { id: 12, text: "Hyaluronic Acid" },
+  { id: 13, text: "CA-AKG" },
 ];
 
 export default function Q5(props) {

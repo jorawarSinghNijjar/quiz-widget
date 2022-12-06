@@ -17,7 +17,7 @@ const {
   TMG,
   FISETIN,
   OMEGA_3,
-  VIT_D_MG_K2,
+  // VIT_D_MG_K2,
   CREATINE,
   CA_AKG,
   RESVERATROL,
@@ -36,7 +36,7 @@ goalSupplementMap.set(MOOD, [
   TMG,
   FISETIN,
   OMEGA_3,
-  VIT_D_MG_K2,
+  VIT_D3_MG_K2,
   CREATINE,
 ]);
 
@@ -46,15 +46,15 @@ goalSupplementMap.set(MOOD, [
   TMG,
   FISETIN,
   OMEGA_3,
-  VIT_D_MG_K2,
+  VIT_D3_MG_K2,
   CREATINE,
 ]);
 
 // 2 COGNITIVE_PERFORMANCE
-goalSupplementMap.set(COGNITIVE_PERFORMANCE, [NMN, TMG, VIT_D_MG_K2]);
+goalSupplementMap.set(COGNITIVE_PERFORMANCE, [NMN, TMG, VIT_D3_MG_K2]);
 
 // 3 ENGERGY_LEVELS
-goalSupplementMap.set(ENGERGY_LEVELS, [NMN, TMG, CA_AKG, VIT_D_MG_K2]);
+goalSupplementMap.set(ENGERGY_LEVELS, [NMN, TMG, CA_AKG, VIT_D3_MG_K2]);
 
 // 4 LOOKING_YOUNGER
 goalSupplementMap.set(LOOKING_YOUNGER, [
@@ -70,7 +70,7 @@ goalSupplementMap.set(LOOKING_YOUNGER, [
 goalSupplementMap.set(MAINTAINING_ATHLETIC_PERFORMANCE, [
   NMN,
   TMG,
-  VIT_D_MG_K2,
+  VIT_D3_MG_K2,
   HLA,
   COQ10,
   COLLAGEN_PEPTIDES,
