@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Spinner, Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-import { prodUrl } from "./../../apiUrlConfig";
+import { prodUrl,devUrl } from "./../../apiUrlConfig";
 import { previousQuestion } from "../../slices/question";
 
 export default function QuizComplete(props) {
