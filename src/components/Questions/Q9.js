@@ -5,9 +5,10 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addEmail } from "../../slices/userProfile";
 import { nextQuestion } from "../../slices/question";
-import logoIcon from "../../assets/images/icons/logo-icon.svg";
-import logoText from "../../assets/images/icons/logo-text.svg";
 import PolicyCheckBox from "../CustomCheckBox/PolicyCheckBox";
+
+const logoIcon = "https://zest-quiz-widget-images.s3.us-east-2.amazonaws.com/icons/logo-icon.svg";
+const logoText ="https://zest-quiz-widget-images.s3.us-east-2.amazonaws.com/icons/logo-text.svg";
 
 export default function Q9(props) {
 

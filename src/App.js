@@ -35,7 +35,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="quiz-container">
       <Container className="container-box d-flex flex-column justify-content-between">
         <div>
           <Row>

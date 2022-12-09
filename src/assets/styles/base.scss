@@ -1,9 +1,10 @@
-body {
+.quiz-container {
   background-color: #20242a;
   font-family: "Red Hat Display";
   font-style: normal;
   color: #ffffff;
-  height: 100vh;
+  height: 100%;
+  border-radius: 1rem;
 }
 
 .container-box {
@@ -12,7 +13,7 @@ body {
   // overflow: hidden;
 }
 
-a {
+.quiz-container a {
   color: #eeeeee;
   text-decoration: none;
 }
