@@ -46,8 +46,8 @@ export default function Q9(props) {
       <Row>
         <Col>
           <div className="logo-box text-center">
-            <img src={logoIcon} alt="logo-icon" className="logo-icon" />
-            <img src={logoText} alt="logo-text" className="logo-text" />
+            <img src={logoIcon} alt="logo-icon" className="quiz-logo-icon" />
+            <img src={logoText} alt="logo-text" className="quiz-logo-text" />
           </div>
           <h1 className="widget-heading mx-auto" style={{ width: "80%" }}>
             {props.question}
