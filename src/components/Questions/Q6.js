@@ -26,6 +26,8 @@ const lifeFactorsArr = [
 export default function Q6(props) {
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
   const [selectedLifeFactors, setSelectedLifeFactors] = useState([]);
+  const [displayOtherTextField, setDisplayOtherTextField] = useState(false);
+  const [otherFactor, setOtherFactor] = useState("");
 
   const dispatch = useDispatch();
 
@@ -40,12 +42,13 @@ export default function Q6(props) {
     console.log("submitting Q6...");
   };
 
-  const onLifeFactorSelect = (id) => {
+  const insertFactorInArr = (id) => {
     const selectedCheckboxesArr = selectedCheckboxes;
 
     const findIdx = selectedCheckboxesArr.indexOf(id);
 
     if (findIdx > -1) {
+      // If checkbox is already selected
       console.log("Already in list");
       selectedCheckboxesArr.splice(findIdx, 1);
       setSelectedLifeFactors(
@@ -55,16 +58,42 @@ export default function Q6(props) {
           return item.id !== id;
         })
       );
+      // Hide other Textfield  
+      setDisplayOtherTextField(false);
+
     } else {
-      console.log("New item");
-      selectedCheckboxesArr.push(id);
-      setSelectedLifeFactors(
-        selectedLifeFactors.concat(lifeFactorsArr[id - 1])
-      );
+      // specify other textfield is hardcoded with id 9
+      if (id === 9) {
+        setDisplayOtherTextField(true);
+        selectedCheckboxesArr.push(id);
+        setSelectedLifeFactors(
+          selectedLifeFactors.concat({ id: 9, text: otherFactor })
+        );
+      } else {
+        // If checkbox is not selected yet
+        console.log("New item");
+        selectedCheckboxesArr.push(id);
+        setSelectedLifeFactors(
+          selectedLifeFactors.concat(lifeFactorsArr[id - 1])
+        );
+      }
     }
 
     setSelectedCheckboxes(selectedCheckboxesArr);
+  }
+
+  const onLifeFactorSelect = (id) => {
+    insertFactorInArr(id);
   };
+
+  const onOtherFactorChange = (e) => {
+    setOtherFactor(e.target.value)
+    //update text value in lifeFactorsArr
+    setSelectedLifeFactors(
+      selectedLifeFactors.map((item,idx) => item.id === 9 ? { id: 9, text: e.target.value } : item)
+    );
+  };
+
   console.log(selectedLifeFactors);
   return (
     <div>
@@ -89,6 +118,18 @@ export default function Q6(props) {
                 />
               ))}
             </Form.Group>
+            {displayOtherTextField ? (
+              <Form.Group className="mb-3 form-content-box">
+                <Form.Control
+                  type="text"
+                  placeholder="Enter other factors here"
+                  value={otherFactor}
+                  onChange={onOtherFactorChange}
+                />
+              </Form.Group>
+            ) : (
+              <></>
+            )}
             <div className="q-btn__box fixed-bottom mx-auto">
               <Button
                 type="submit"
