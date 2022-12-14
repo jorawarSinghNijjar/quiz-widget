@@ -36,9 +36,9 @@ export const prepareAdvice = (goals, currentSupplements, dislikedSupplements) =>
 export const getRecommendedSupplementsForEmail = (recommendedSupplements) => {
     // Add Details to the supplement
     const recommendedSupplementsForEmail = recommendedSupplements.map(item => {
-
+        console.log("Recommended", RecommendationSupplementList[item])
         return RecommendationSupplementList[item];
-    })
+    }).filter(item => item !== undefined);
 
     return recommendedSupplementsForEmail;
 }

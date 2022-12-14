@@ -113,4 +113,19 @@ export const RecommendationSupplementList = {
   "Creatine": {
     name: "Creatine",
   },
+  "HLA": {
+    name: "HLA",
+  },
+  "CoQ10": {
+    name: "CoQ10",
+  },
+  "Collagen peptides": {
+    name: "Collagen peptides",
+  },
+  "Collagen": {
+    name: "Collagen",
+  },
+  "Mg Vit Vit K2": {
+    name: "Mg Vit Vit K2",
+  },
 };
