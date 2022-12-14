@@ -58,9 +58,8 @@ export default function Q6(props) {
           return item.id !== id;
         })
       );
-      // Hide other Textfield  
+      // Hide other Textfield
       setDisplayOtherTextField(false);
-
     } else {
       // specify other textfield is hardcoded with id 9
       if (id === 9) {
@@ -80,17 +79,19 @@ export default function Q6(props) {
     }
 
     setSelectedCheckboxes(selectedCheckboxesArr);
-  }
+  };
 
   const onLifeFactorSelect = (id) => {
     insertFactorInArr(id);
   };
 
   const onOtherFactorChange = (e) => {
-    setOtherFactor(e.target.value)
+    setOtherFactor(e.target.value);
     //update text value in lifeFactorsArr
     setSelectedLifeFactors(
-      selectedLifeFactors.map((item,idx) => item.id === 9 ? { id: 9, text: e.target.value } : item)
+      selectedLifeFactors.map((item, idx) =>
+        item.id === 9 ? { id: 9, text: e.target.value } : item
+      )
     );
   };
 
@@ -117,19 +118,19 @@ export default function Q6(props) {
                   handleChange={() => onLifeFactorSelect(checkbox.id)}
                 />
               ))}
-            </Form.Group>
-            {displayOtherTextField ? (
-              <Form.Group className="mb-3 form-content-box">
+              {displayOtherTextField ? (
                 <Form.Control
+                  autoFocus
                   type="text"
                   placeholder="Enter other factors here"
                   value={otherFactor}
                   onChange={onOtherFactorChange}
                 />
-              </Form.Group>
-            ) : (
-              <></>
-            )}
+              ) : (
+                <></>
+              )}
+            </Form.Group>
+
             <div className="q-btn__box fixed-bottom mx-auto">
               <Button
                 type="submit"
