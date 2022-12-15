@@ -18,7 +18,7 @@ export default function QuizComplete(props) {
       .post(`${prodUrl}/send-email`, userProfile)
       .then(function (response) {
         console.log("Email sent successfully", response);
-        setMessage("Recommendation has been sent your Email !");
+        setMessage("Your recommendation list has been sent to your email.");
       })
       .catch(function (error) {
         console.log("Error sending email");

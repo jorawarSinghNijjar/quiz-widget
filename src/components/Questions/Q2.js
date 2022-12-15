@@ -45,7 +45,7 @@ export default function Question1(props) {
           <Form onSubmit={onFormSubmit}>
             <Form.Group className="mb-3 form-content-box">
               <Form.Label>Gender at birth</Form.Label>
-              {["Male", "Female"].map((item, idx) => (
+              {["Male", "Female","Other"].map((item, idx) => (
                 <CustomRadioButton
                   key={idx}
                   id="gender"
