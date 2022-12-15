@@ -21,11 +21,15 @@ const supplementsArr = [
   { id: 11, text: "Sirt 6 Activator" },
   { id: 12, text: "Hyaluronic Acid" },
   { id: 13, text: "CA-AKG" },
+  { id: 14, text: "Other please specify" },
 ];
 
 export default function Q5(props) {
   const [selectedSupplements, setSelectedSupplements] = useState([]);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
+
+  const [displayOtherTextField, setDisplayOtherTextField] = useState(false);
+  const [otherSupplement, setOtherSupplement] = useState("");
 
   const dispatch = useDispatch();
 
@@ -56,15 +60,38 @@ export default function Q5(props) {
         })
       );
     } else {
-      console.log("New item");
-      selectedCheckboxesArr.push(id);
-      setSelectedSupplements(
-        selectedSupplements.concat(supplementsArr[id - 1])
-      );
+
+      if (id === 14) {
+        setDisplayOtherTextField(true);
+        selectedCheckboxesArr.push(id);
+        setSelectedSupplements(
+          selectedSupplements.concat(supplementsArr[id - 1])
+        );
+      } else {
+        // If checkbox is not selected yet
+        console.log("New item");
+        selectedCheckboxesArr.push(id);
+        setSelectedSupplements(
+          selectedSupplements.concat(supplementsArr[id - 1])
+        );
+      }
+
+     
     }
 
     setSelectedCheckboxes(selectedCheckboxesArr);
   };
+
+  const onOtherSupplementChange = (e) => {
+    setOtherSupplement(e.target.value);
+    //update text value in lifeFactorsArr
+    setSelectedSupplements(
+      selectedSupplements.map((item, idx) =>
+        item.id === 14 ? { id: 14, text: e.target.value } : item
+      )
+    );
+  };
+
   console.log(selectedSupplements);
   return (
     <div>
@@ -87,6 +114,17 @@ export default function Q5(props) {
                   handleChange={() => onSupplementSelect(checkbox.id)}
                 />
               ))}
+               {displayOtherTextField ? (
+                <Form.Control
+                  autoFocus
+                  type="text"
+                  placeholder="Enter other supplement here"
+                  value={otherSupplement}
+                  onChange={onOtherSupplementChange}
+                />
+              ) : (
+                <></>
+              )}
             </Form.Group>
             <div className="q-btn__box fixed-bottom mx-auto">
               <Button
