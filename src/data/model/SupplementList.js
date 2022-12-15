@@ -10,12 +10,12 @@ export const SupplementList = {
   HLA: "HLA",
   COQ10: "CoQ10",
   COLLAGEN_PEPTIDES:"Collagen peptides",
-  COLLAGEN: "Collagen",
+  // COLLAGEN: "Collagen",
   QUERCETIN:"Quercetin",
   BERBERINE: "Berberine",
-  MG_VIT_VIT_K2: "Mg Vit Vit K2",
+  // MG_VIT_VIT_K2: "Mg Vit Vit K2",
   VIT_D3_MG_K2: "Vit D3 Mg K2",
   SPERMIDINE: "Spermidine",
   SIRT_6_ACTIVATOR: "Sirt 6 Activator",
-  HYALURONIC_ACID: "Hyaluronic Acid"
+  // HYALURONIC_ACID: "Hyaluronic Acid"
 };

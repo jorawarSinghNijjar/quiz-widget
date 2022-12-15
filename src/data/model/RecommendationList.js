@@ -92,7 +92,7 @@ export const RecommendationSupplementList = {
     howToTake: "In the morning with water.",
   },
 
-  "Hyaluronic Acid": {
+  "HLA": {
     name: "Hyaluronic Acid",
     impact: "Looking younger, joint health, improved immunity",
     dosage: "200mg/day",
@@ -112,20 +112,23 @@ export const RecommendationSupplementList = {
 
   "Creatine": {
     name: "Creatine",
-  },
-  "HLA": {
-    name: "HLA",
+    impact: "Energy levels, cognitive function, muscle mass",
+    dosage: "0.03g/kg so for an average 70kg person, 2.1g/day",
+    howToTake: "Powder or capsule form taken in the morning with a large glass of water",
+    moreDetails: "Creatine is one of the most popular supplements used to boost athletic performance, but it is also fantastic for extending healthy lifespan. Creatine protects against sarcopenia and improves cognitive function and memory by increasing levels of ATP available in the brain"
   },
   "CoQ10": {
     name: "CoQ10",
+    impact: "Lifespan extension, athletic performance",
+    dosage: "200mg per day",
+    howToTake: "In the morning mixed with a source of fat such as yoghurt or olive oil",
+    moreDetails: "CoQ10 plays a fundamental role in energy production and acts as a powerful antioxidant, inhibiting free radical generation and preventing cell damage. Though your body makes CoQ10, its levels decline with age."
   },
   "Collagen peptides": {
     name: "Collagen peptides",
-  },
-  "Collagen": {
-    name: "Collagen",
-  },
-  "Mg Vit Vit K2": {
-    name: "Mg Vit Vit K2",
+    impact: "Joint health, looking younger, immune function",
+    dosage: "10g/day",
+    howToTake: "1 scoop of hydrolyzed collagen peptides in your favourite smoothie, juice, yoghurt or other morning drink",
+    moreDetails: "Collagen is the main structural protein in the body’s connective tissues. It is the most abundant protein in mammals, making up from 25% to 35% of the whole-body protein content. Your ability to create collagen declines with age, leading to thinning and wrinkling of the skin and joint degeneration"
   },
 };

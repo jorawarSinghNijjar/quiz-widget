@@ -24,10 +24,10 @@ const {
   HLA,
   COQ10,
   COLLAGEN_PEPTIDES,
-  COLLAGEN,
+  // COLLAGEN,
   QUERCETIN,
   BERBERINE,
-  MG_VIT_VIT_K2,
+  // MG_VIT_VIT_K2,
   VIT_D3_MG_K2,
 } = SupplementList;
 
@@ -77,7 +77,7 @@ goalSupplementMap.set(MAINTAINING_ATHLETIC_PERFORMANCE, [
 ]);
 
 // 6 MOBILITY
-goalSupplementMap.set(MOBILITY, [HLA, COLLAGEN, MG_VIT_VIT_K2, OMEGA_3]);
+goalSupplementMap.set(MOBILITY, [HLA, COLLAGEN_PEPTIDES, VIT_D3_MG_K2, OMEGA_3]);
 
 // 7 STRESS_MANAGEMENT
 goalSupplementMap.set(STRESS_MANAGEMENT, [OMEGA_3, VIT_D3_MG_K2]);
