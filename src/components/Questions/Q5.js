@@ -6,23 +6,42 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addCurrentSuplements } from "../../slices/userProfile";
 import { nextQuestion } from "../../slices/question";
+import { SupplementList } from "../../data/model/SupplementList";
+
+const {
+  NMN,
+  TMG,
+  FISETIN,
+  OMEGA_3,
+  CREATINE,
+  CA_AKG,
+  RESVERATROL,
+  HLA,
+  COQ10,
+  COLLAGEN_PEPTIDES,
+  QUERCETIN,
+  BERBERINE,
+  VIT_D3_MG_K2,
+  SPERMIDINE,
+  SIRT_6_ACTIVATOR
+} = SupplementList;
 
 const supplementsArr = [
-  { id: 1, text: "None yet" },
+  { id: 1, text: "None yet", sup: "" },
   // { id: 2, text: "NMN or NR" },
-  { id: 2, text: "NMN" },
-  { id: 3, text: "Resveratrol" },
-  { id: 4, text: "TMG" },
-  { id: 5, text: "Vitamin D3" },
-  { id: 6, text: "Omega 3" },
-  { id: 7, text: "Fisetin" },
-  { id: 8, text: "Quercetin" },
-  { id: 9, text: "Berberine" },
-  { id: 10, text: "Spermidine" },
-  { id: 11, text: "Sirt 6 Activator" },
-  { id: 12, text: "Hyaluronic Acid" },
-  { id: 13, text: "CA-AKG" },
-  { id: 14, text: "Other please specify" },
+  { id: 2, text: "NMN or NR", sup: NMN },
+  { id: 3, text: "Resveratrol", sup: RESVERATROL },
+  { id: 4, text: "TMG", sup: TMG },
+  { id: 5, text: "Vitamin D3", sup: VIT_D3_MG_K2 },
+  { id: 6, text: "Omega 3", sup: OMEGA_3 },
+  { id: 7, text: "Fisetin", sup: FISETIN },
+  { id: 8, text: "Quercetin", sup: QUERCETIN },
+  { id: 9, text: "Berberine", sup: BERBERINE },
+  { id: 10, text: "Spermidine", sup: SPERMIDINE },
+  { id: 11, text: "Sirt 6 Activator", sup: SIRT_6_ACTIVATOR },
+  { id: 12, text: "Hyaluronic Acid", sup: HLA },
+  { id: 13, text: "CA-AKG", sup: CA_AKG },
+  { id: 14, text: "Other please specify", sup: "" },
 ];
 
 export default function Q5(props) {
@@ -38,7 +57,7 @@ export default function Q5(props) {
     e.preventDefault();
 
     dispatch(
-      addCurrentSuplements(selectedSupplements.map((item) => item.text))
+      addCurrentSuplements(selectedSupplements.map((item) => item.sup))
     );
     dispatch(nextQuestion());
 
@@ -88,7 +107,7 @@ export default function Q5(props) {
     //update text value in lifeFactorsArr
     setSelectedSupplements(
       selectedSupplements.map((item, idx) =>
-        item.id === 14 ? { id: 14, text: e.target.value } : item
+        item.id === 14 ? { id: 14, text: e.target.value, sup:e.target.value } : item
       )
     );
   };
