@@ -12,7 +12,8 @@ import { nextQuestion } from "../../slices/question";
 
 const supplementsArr = [
   { id: 1, text: "None" },
-  { id: 2, text: "NMN or NR" },
+  // { id: 2, text: "NMN or NR" },
+  { id: 2, text: "NMN" },
   { id: 3, text: "Resveratrol" },
   { id: 4, text: "TMG" },
   { id: 5, text: "Vitamin D3" },

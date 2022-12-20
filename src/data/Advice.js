@@ -25,7 +25,7 @@ export const prepareAdvice = (goals, currentSupplements, dislikedSupplements) =>
             }
         });
 
-        console.log("RecommendedList -> ",RecommendationSupplementList)
+        console.log("RecommendedList -> ",recommendedSupplements)
 
     });
 
